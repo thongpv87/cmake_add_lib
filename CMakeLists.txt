@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.21)
 project(test_cpp
   VERSION "0.1.0"
   DESCRIPTION "cpp template project"
@@ -24,5 +24,7 @@ target_include_directories(main
 )
 
 target_link_libraries(main
-    PRIVATE ffmpegd
+    PRIVATE ffmpeg
 )
+
+install(TARGETS main)

@@ -7,5 +7,5 @@ PROJECT_GIT=https://github.com/c-ares/c-ares.git
 mkdir -p ${WORKDIR}
 cd ${WORKDIR}
 git clone ${PROJECT_GIT} --recursive ${PROJECT_NAME}
-cmake ${PROJECT_NAME} -B${PROJECT_NAME}-build -DCMAKE_INSTALL_PREFIX=${WORKDIR}
+cmake ${PROJECT_NAME} -B${PROJECT_NAME}-build -DCMAKE_INSTALL_PREFIX=${WORKDIR} -DCARES_STATIC=ON -DCARES_SHARED=OFF
 make install -C ${PROJECT_NAME}-build
